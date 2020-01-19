@@ -11,3 +11,60 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+.App {
+  width: 70vw;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.Navbar {
+  width: 100%;
+  margin: 10px;
+  font-weight: 600;
+  color: #fafafa;
+  background-color: #483d8b;
+  border-radius: 5px;
+}
+
+.Navbar_list {
+  padding: 5px 0;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Navbar_list_item {
+  padding: 5px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid #483d8b;
+}
+
+.Navbar_list_item:hover {
+  border-bottom: 2px solid #fafafa;
+}
+
+.Recipe {
+  width: 100%;
+  padding: 10px;
+  height: 70vh;
+  background-color: #DDEBED;
+  border-radius: 5px;
+}
