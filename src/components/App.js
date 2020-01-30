@@ -7,21 +7,29 @@ import Navbar from './Navbar'
 import Recipe from './Recipe'
 import Form from './Form'
 
-import recipesArr from '../data/Recipes'
-
-
 class App extends Component {
-    
     constructor() {
         super();
         this.state = {
             category: "breakfasts",
-            recipes: recipesArr,
+            recipes: [],
         }
         
         this.navClick = this.navClick.bind(this);
     }
     
+    //get recipes from database
+    async componentDidMount() {
+        try {
+            const response = await fetch: ("");
+            const json = await response.json();
+            this.setState({ recipes: json})
+        } catch (error) {
+            console.log(error)
+        };
+        
+    };
+
     navClick(id) {
         this.setState({
             category: id
