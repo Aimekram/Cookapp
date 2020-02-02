@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function Lunches() {
     return(
-        <div>Sałatka Aśki</div>
+        <div className='recipe'>Sałatka Aśki</div>
     )
-}
+};
 
-export default Lunches
+export default Lunches;
