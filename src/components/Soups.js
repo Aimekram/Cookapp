@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
 function Soups() {
     return(
-        <div>Rosół</div>
+        <div className='recipe'>Rosół</div>
     )
-}
+};
 
-export default Soups
+export default Soups;

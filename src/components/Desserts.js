@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 function Desserts() {
     return(
-        <div>
+        <div className='recipe'>
            <h2>Murzynek</h2>
            <div>Ingredients:
                <ol>
@@ -16,10 +16,10 @@ function Desserts() {
                 <li>baking time</li>
                 <li>notes</li>
                 <li>setting the day I want it for</li>
-                <li>life calendar for one week?</li>
+                <li>live calendar for one week?</li>
             </ul>
         </div>
     )
-}
+};
 
-export default Desserts
+export default Desserts;

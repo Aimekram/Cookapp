@@ -1,49 +1,45 @@
-import React, {Component} from 'react'
-
-// import './App.css'
-
-import Header from './Header'
-import Navbar from './Navbar'
-import Recipe from './Recipe'
+import React, {Component} from 'react';
+import { Route, Switch } from 'react-router-dom';
+import Header from './Header';
+import Navbar from './Navbar';
 import Form from './Form'
+import Breakfasts from './Breakfasts';
+import Lunches from './Lunches';
+import Soups from './Soups';
+import Desserts from './Desserts';
 
 class App extends Component {
     constructor() {
         super();
         this.state = {
-            category: "breakfasts",
             recipes: [],
         }
-        
-        this.navClick = this.navClick.bind(this);
     }
     
     //get recipes from database
-    async componentDidMount() {
-        try {
-            const response = await fetch: ("");
-            const json = await response.json();
-            this.setState({ recipes: json})
-        } catch (error) {
-            console.log(error)
-        };
+    // async componentDidMount() {
+    //     try {
+    //         const response = await fetch: ("");
+    //         const json = await response.json();
+    //         this.setState({ recipes: json})
+    //     } catch (error) {
+    //         console.log(error)
+    //     };
         
-    };
-
-    navClick(id) {
-        this.setState({
-            category: id
-        })
-    }
-    
+    // };
+   
     render() {
         return (
             <div className="App">
                 <Header />
-                <Navbar 
-                    navClick={this.navClick} />
-                <Recipe 
-                    id={this.state.category}/>
+                <Navbar />
+                <Switch >
+                    <Route path="/" exact component={Breakfasts} />
+                    <Route path="/breakfasts" component={Breakfasts} />
+                    <Route path="/lunches" component={Lunches} />
+                    <Route path="/soups" component={Soups} />
+                    <Route path="/desserts" component={Desserts} />
+                </Switch>
                 <Form />
             </div>
       );
